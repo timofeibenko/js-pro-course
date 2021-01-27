@@ -99,8 +99,11 @@ describe('Math function', () => {
     });
 
     it('should revert integer\'s sign', () => {
-        const result = My_Math(1).revert().value()
-        assert.strictEqual(result, -1)
+        const result_1 = My_Math(1).revert().value()
+        assert.strictEqual(result_1, -1)
+
+        const result_2 = My_Math(-1).revert().value()
+        assert.strictEqual(result_2, 1)
     });
 
     it('.format method should perform an action defined in a callback passed to it', () => {
@@ -111,7 +114,7 @@ describe('Math function', () => {
         assert.strictEqual(result, 'The result is 1')
     });
 
-    it('methods must return context', () => {
+    it('all methods exept .format must return context', () => {
         const result = My_Math(5).plus(5)
         assert.typeOf(result, 'object')
     });
