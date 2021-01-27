@@ -5,12 +5,12 @@
         }
     
         this.init = init;
-    }
+    };
     
     My_Math.prototype.plus = function(val) {
             this.init += val
             return this
-        };
+    };
     
     My_Math.prototype.minus = function(val) {
         this.init -= val
@@ -66,4 +66,7 @@
     My_Math.prototype.format = function (callback) {
         return callback(this.init)  
     };
+
+    window.My_Math = My_Math;
+
 })(window);
