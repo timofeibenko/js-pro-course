@@ -110,7 +110,7 @@ describe('Math function', () => {
         assert.strictEqual(result, 'The result is 1')
     });
 
-    it('all methods exept .format must return context', () => {
+    it('all methods except .format must return context', () => {
         const result = My_Math(5).plus(5)
         assert.typeOf(result, 'object')
     });
